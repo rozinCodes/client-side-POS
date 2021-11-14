@@ -6,7 +6,6 @@ const Banner = () => {
 	return (
 		<View style={[styles.Container, {borderBottomWidth: 0.5, borderBottomColor: colors.white}]}>
 			<Image source={require('../assets/images/audiophile.png')} />
-            {/* <Text style = {{fontFamily: 'Chango-Regular', color: colors.white, fontSize: spacing[7]}}>audiophile</Text> */}
 		</View>
 	);
 };

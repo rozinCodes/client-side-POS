@@ -10,7 +10,8 @@ export default function App() {
 		'Manrope-Regular': require('./assets/fonts/Manrope-Regular.ttf'),
 		'Manrope-Light': require('./assets/fonts/Manrope-Light.ttf'),
 		'Manrope-Bold': require('./assets/fonts/Manrope-Bold.ttf'),
-		'Chango-Regular': require('./assets/fonts/Chango-Regular.ttf')
+		'Chango-Regular': require('./assets/fonts/Chango-Regular.ttf'),
+		'Exo2': require('./assets/fonts//Exo2.ttf')
 	});
 
 	if (!fontsLoaded) {
