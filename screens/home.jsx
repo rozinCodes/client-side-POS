@@ -1,11 +1,11 @@
+import { AntDesign } from '@expo/vector-icons';
+import LottieView from 'lottie-react-native';
 import React from 'react';
-import { ScrollView, View, Image, Text, Pressable, Dimensions } from 'react-native';
+import { Dimensions, Image, Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Banner from '../components/banner';
-import { colors } from '../presets/colors';
-import LottieView from 'lottie-react-native';
 import { spacing } from '../presets';
-import { AntDesign } from '@expo/vector-icons';
+import { colors } from '../presets/colors';
 
 const CategoryBox = ({ title, image, onPress }) => {
 	return (
@@ -67,7 +67,7 @@ const Home = ({ navigation }) => {
 					</View>
 					<LottieView style={{ marginTop: 35 }} source={require('../assets/arrow-down.json')} autoPlay loop />
 				</View>
-				<ScrollView horizontal>
+				<ScrollView horizontal showsHorizontalScrollIndicator={false}>
 					<CategoryBox
 						title="Headphones"
 						image={require('../assets/images/headphone.png')}

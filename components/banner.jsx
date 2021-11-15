@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
 	Container: {
 		height: 60,
 		backgroundColor: colors.black,
-        elevation: 10,
 		justifyContent: 'center',
 		alignItems: 'center'
 	}

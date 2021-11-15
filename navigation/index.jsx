@@ -11,6 +11,7 @@ import Headphone from '../screens/headphone';
 import ProductDetails from '../screens/product-details';
 import Checkout from '../screens/checkout';
 import { colors } from '../presets/colors';
+import ReduxDemo from '../redux/test';
 
 const Tab = createBottomTabNavigator();
 const stack = createNativeStackNavigator();
@@ -26,6 +27,7 @@ const THEME = {
 const Navigation = () => {
 	return (
 		<NavigationContainer theme={THEME}>
+			<ReduxDemo/>
 			<BottomTabNavigator />
 		</NavigationContainer>
 	);
