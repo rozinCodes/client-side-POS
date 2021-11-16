@@ -3,9 +3,11 @@ import LottieView from 'lottie-react-native';
 import React from 'react';
 import { Dimensions, Image, Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useDispatch } from 'react-redux';
 import Banner from '../components/banner';
 import { spacing } from '../presets';
 import { colors } from '../presets/colors';
+import { fetchProducts } from '../redux/productSlice';
 
 const CategoryBox = ({ title, image, onPress }) => {
 	return (
@@ -29,7 +31,7 @@ const CategoryBox = ({ title, image, onPress }) => {
 							flexDirection: 'row',
 							alignItems: 'flex-end',
 							justifyContent: 'center',
-							paddingTop: 15
+							paddingTop: spacing[4]
 						}}
 					>
 						<Text style={{ color: colors.primary, paddingRight: 15 }}>Shop</Text>
@@ -42,6 +44,12 @@ const CategoryBox = ({ title, image, onPress }) => {
 };
 
 const Home = ({ navigation }) => {
+	const dispatch = useDispatch();
+
+	React.useEffect(() => {
+		dispatch(fetchProducts());
+	}, []);
+	
 	return (
 		<SafeAreaView>
 			<ScrollView>
@@ -52,7 +60,7 @@ const Home = ({ navigation }) => {
 						<Text
 							style={{
 								color: colors.white,
-								marginBottom: 10,
+								marginBottom: spacing[2],
 								fontSize: spacing[6],
 								textTransform: 'uppercase',
 								fontWeight: 'bold'
